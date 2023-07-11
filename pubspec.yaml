@@ -14,7 +14,7 @@ dependencies:
   cupertino_icons: ^1.0.5
   flutter_vector_icons: ^2.0.0
   image_picker: ^1.0.0
-  nb_utils: ^4.4.17
+  nb_utils: ^6.0.0
   package_info_plus: ^4.0.2
   google_fonts: ^5.1.0
 
