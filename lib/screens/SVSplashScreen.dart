@@ -19,7 +19,7 @@ class _SVSplashScreenState extends State<SVSplashScreen> {
 
   Future<void> init() async {
     setStatusBarColor(Colors.transparent);
-    await 10.seconds.delay;
+    await 4.seconds.delay;
     await Walkthrough().launch(context, isNewTask: true);
     finish(context);
     SVSignInScreen().launch(context, isNewTask: true);
