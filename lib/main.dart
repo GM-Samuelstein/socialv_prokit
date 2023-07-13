@@ -24,7 +24,7 @@ class MyApp extends StatelessWidget {
       builder: (_) => MaterialApp(
         scrollBehavior: SBehavior(),
         navigatorKey: navigatorKey,
-        title: 'SocialV',
+        title: 'Alarrt',
         debugShowCheckedModeBanner: false,
         theme: AppTheme.lightTheme,
         darkTheme: AppTheme.darkTheme,

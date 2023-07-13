@@ -7,7 +7,6 @@ import 'package:socialv_prokit/screens/home/components/SVPostComponent.dart';
 import 'package:socialv_prokit/screens/home/components/SVStoryComponent.dart';
 import 'package:socialv_prokit/utils/SVCommon.dart';
 
-
 class SVHomeFragment extends StatefulWidget {
   @override
   State<SVHomeFragment> createState() => _SVHomeFragmentState();
@@ -63,6 +62,7 @@ class _SVHomeFragmentState extends State<SVHomeFragment> {
         ],
       ),
       drawer: Drawer(
+        width: MediaQuery.of(context).size.width * 0.85,
         backgroundColor: context.cardColor,
         child: SVHomeDrawerComponent(),
       ),

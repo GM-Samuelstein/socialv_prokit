@@ -7,7 +7,6 @@ import 'package:socialv_prokit/utils/SVColors.dart';
 
 import '../../../../../main.dart';
 
-
 class SVCommentScreen extends StatefulWidget {
   const SVCommentScreen({Key? key}) : super(key: key);
 
@@ -17,7 +16,6 @@ class SVCommentScreen extends StatefulWidget {
 
 class _SVCommentScreenState extends State<SVCommentScreen> {
   List<SVCommentModel> commentList = [];
-
 
   @override
   void initState() {
@@ -30,7 +28,8 @@ class _SVCommentScreenState extends State<SVCommentScreen> {
 
   @override
   void dispose() {
-    setStatusBarColor(appStore.isDarkMode ? appBackgroundColorDark : SVAppLayoutBackground);
+    setStatusBarColor(
+        appStore.isDarkMode ? appBackgroundColorDark : SVAppLayoutBackground);
     super.dispose();
   }
 

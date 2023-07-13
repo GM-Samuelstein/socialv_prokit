@@ -14,7 +14,8 @@ class SVStoryScreen extends StatefulWidget {
   State<SVStoryScreen> createState() => _SVStoryScreenState();
 }
 
-class _SVStoryScreenState extends State<SVStoryScreen> with TickerProviderStateMixin {
+class _SVStoryScreenState extends State<SVStoryScreen>
+    with TickerProviderStateMixin {
   List<String> imageList = [];
   StoryController storyController = StoryController();
 
@@ -46,7 +47,8 @@ class _SVStoryScreenState extends State<SVStoryScreen> with TickerProviderStateM
           StoryView(
             storyItems: [
               StoryItem.text(
-                title: "I guess you'd love to see more of our food. That's great.",
+                title:
+                    "I guess you'd love to see more of our food. That's great.",
                 backgroundColor: Colors.blue,
               ),
               StoryItem.text(
@@ -96,8 +98,11 @@ class _SVStoryScreenState extends State<SVStoryScreen> with TickerProviderStateM
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
-                      Text(widget.story!.name.validate(), style: boldTextStyle(color: Colors.white)),
-                      svRobotoText(text: '${widget.story!.time.validate()} ago', color: Colors.white),
+                      Text(widget.story!.name.validate(),
+                          style: boldTextStyle(color: Colors.white)),
+                      svRobotoText(
+                          text: '${widget.story!.time.validate()} ago',
+                          color: Colors.white),
                     ],
                   )
                 ],
@@ -111,26 +116,47 @@ class _SVStoryScreenState extends State<SVStoryScreen> with TickerProviderStateM
                 padding: EdgeInsets.only(left: 16, right: 4, bottom: 16),
                 child: AppTextField(
                   controller: messageController,
-                  textStyle: secondaryTextStyle(fontFamily: svFontRoboto, color: Colors.white),
+                  textStyle: secondaryTextStyle(
+                      fontFamily: svFontRoboto, color: Colors.white),
                   textFieldType: TextFieldType.OTHER,
                   decoration: InputDecoration(
                     hintText: 'Send Message',
-                    hintStyle: secondaryTextStyle(fontFamily: svFontRoboto, color: Colors.white),
-                    border: OutlineInputBorder(borderRadius: BorderRadius.circular(8), borderSide: BorderSide(width: 1.0, color: Colors.white)),
-                    enabledBorder:
-                        OutlineInputBorder(borderRadius: BorderRadius.circular(8), borderSide: BorderSide(width: 1.0, color: Colors.white)),
-                    focusedBorder:
-                        OutlineInputBorder(borderRadius: BorderRadius.circular(8), borderSide: BorderSide(width: 1.0, color: Colors.white)),
+                    hintStyle: secondaryTextStyle(
+                        fontFamily: svFontRoboto, color: Colors.white),
+                    border: OutlineInputBorder(
+                        borderRadius: BorderRadius.circular(8),
+                        borderSide:
+                            BorderSide(width: 1.0, color: Colors.white)),
+                    enabledBorder: OutlineInputBorder(
+                        borderRadius: BorderRadius.circular(8),
+                        borderSide:
+                            BorderSide(width: 1.0, color: Colors.white)),
+                    focusedBorder: OutlineInputBorder(
+                        borderRadius: BorderRadius.circular(8),
+                        borderSide:
+                            BorderSide(width: 1.0, color: Colors.white)),
                   ),
                 ),
               ),
-              Image.asset('images/socialv/icons/ic_Send.png', height: 24, width: 24, fit: BoxFit.cover, color: Colors.white).onTap(() {
+              Image.asset('images/socialv/icons/ic_Send.png',
+                      height: 24,
+                      width: 24,
+                      fit: BoxFit.cover,
+                      color: Colors.white)
+                  .onTap(() {
                 messageController.clear();
-              }, splashColor: Colors.transparent, highlightColor: Colors.transparent),
+              },
+                      splashColor: Colors.transparent,
+                      highlightColor: Colors.transparent),
               IconButton(
                 icon: widget.story!.like.validate()
-                    ? Image.asset('images/socialv/icons/ic_HeartFilled.png', height: 20, width: 22, fit: BoxFit.fill)
-                    : Image.asset('images/socialv/icons/ic_Heart.png', height: 24, width: 24, fit: BoxFit.cover, color: Colors.white),
+                    ? Image.asset('images/socialv/icons/ic_HeartFilled.png',
+                        height: 20, width: 22, fit: BoxFit.fill)
+                    : Image.asset('images/socialv/icons/ic_Heart.png',
+                        height: 24,
+                        width: 24,
+                        fit: BoxFit.cover,
+                        color: Colors.white),
                 onPressed: () {
                   widget.story!.like = !widget.story!.like.validate();
                   setState(() {});

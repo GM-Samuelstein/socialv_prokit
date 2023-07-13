@@ -6,6 +6,7 @@ import 'package:socialv_prokit/screens/home/screens/SVForumScreen.dart';
 import 'package:socialv_prokit/screens/profile/screens/SVGroupProfileScreen.dart';
 import 'package:socialv_prokit/utils/SVColors.dart';
 import 'package:socialv_prokit/utils/SVCommon.dart';
+import 'package:socialv_prokit/themes/theme8_quiz_app/screen/T8Settings.dart';
 
 class SVHomeDrawerComponent extends StatefulWidget {
   @override
@@ -29,7 +30,9 @@ class _SVHomeDrawerComponentState extends State<SVHomeDrawerComponent> {
             Row(
               mainAxisSize: MainAxisSize.min,
               children: [
-                Image.asset('images/socialv/faces/face_1.png', height: 62, width: 62, fit: BoxFit.cover).cornerRadiusWithClipRRect(8),
+                Image.asset('images/socialv/faces/face_1.png',
+                        height: 62, width: 62, fit: BoxFit.cover)
+                    .cornerRadiusWithClipRRect(8),
                 16.width,
                 Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
@@ -37,13 +40,18 @@ class _SVHomeDrawerComponentState extends State<SVHomeDrawerComponent> {
                   children: [
                     Text('Mal Nurrisht', style: boldTextStyle(size: 18)),
                     8.height,
-                    Text('malnur@gmail.com', style: secondaryTextStyle(color: svGetBodyColor())),
+                    Text('malnur@gmail.com',
+                        style: secondaryTextStyle(color: svGetBodyColor())),
                   ],
                 ),
               ],
             ),
             IconButton(
-              icon: Image.asset('images/socialv/icons/ic_CloseSquare.png', height: 16, width: 16, fit: BoxFit.cover, color: context.iconColor),
+              icon: Image.asset('images/socialv/icons/ic_CloseSquare.png',
+                  height: 16,
+                  width: 16,
+                  fit: BoxFit.cover,
+                  color: context.iconColor),
               onPressed: () {
                 finish(context);
               },
@@ -56,10 +64,17 @@ class _SVHomeDrawerComponentState extends State<SVHomeDrawerComponent> {
           children: options.map((e) {
             int index = options.indexOf(e);
             return SettingItemWidget(
-              decoration: BoxDecoration(color: selectedIndex == index ? SVAppColorPrimary.withAlpha(30) : context.cardColor),
+              decoration: BoxDecoration(
+                  color: selectedIndex == index
+                      ? SVAppColorPrimary.withAlpha(30)
+                      : context.cardColor),
               title: e.title.validate(),
               titleTextStyle: boldTextStyle(size: 14),
-              leading: Image.asset(e.image.validate(), height: 22, width: 22, fit: BoxFit.cover, color: SVAppColorPrimary),
+              leading: Image.asset(e.image.validate(),
+                  height: 22,
+                  width: 22,
+                  fit: BoxFit.cover,
+                  color: SVAppColorPrimary),
               onTap: () {
                 selectedIndex = index;
                 setState(() {});
@@ -72,15 +87,20 @@ class _SVHomeDrawerComponentState extends State<SVHomeDrawerComponent> {
                 } else if (selectedIndex == 2) {
                   finish(context);
                   SVGroupProfileScreen().launch(context);
+                } else if (selectedIndex == 6) {
+                  finish(context);
+                  T8Setting().launch(context);
                 }
               },
             );
           }).toList(),
         ).expand(),
         Divider(indent: 16, endIndent: 16),
+        4.height,
         SnapHelperWidget<PackageInfo>(
           future: PackageInfo.fromPlatform(),
-          onSuccess: (data) => Text(data.version, style: boldTextStyle(color: svGetBodyColor())),
+          onSuccess: (data) =>
+              Text(data.version, style: boldTextStyle(color: svGetBodyColor())),
         ),
         20.height,
       ],

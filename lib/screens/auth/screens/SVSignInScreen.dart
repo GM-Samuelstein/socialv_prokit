@@ -3,10 +3,8 @@ import 'package:nb_utils/nb_utils.dart';
 import 'package:socialv_prokit/screens/auth/components/SVLoginInComponent.dart';
 import 'package:socialv_prokit/screens/auth/components/SVSignUpComponent.dart';
 import 'package:socialv_prokit/utils/SVCommon.dart';
+import 'package:socialv_prokit/utils/SVColors.dart';
 import 'package:socialv_prokit/utils/SVConstants.dart';
-// import 'package:socialv_prokit/main.dart';
-
-import '../../../utils/SVColors.dart';
 
 class SVSignInScreen extends StatefulWidget {
   const SVSignInScreen({Key? key}) : super(key: key);
@@ -60,9 +58,15 @@ class _SVSignInScreenState extends State<SVSignInScreen> {
           Row(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
-              Image.asset('images/socialv/svAppIcon.png', height: 40, width: 40, fit: BoxFit.cover),
+              Image.asset('images/socialv/alarrt-icon.png',
+                  height: 40, width: 40, fit: BoxFit.cover),
               8.width,
-              Text(svAppName, style: primaryTextStyle(color: SVAppColorPrimary, size: 28, weight: FontWeight.w500, fontFamily: svFontRoboto)),
+              Text(svAppName,
+                  style: primaryTextStyle(
+                      color: SVAppColorPrimary,
+                      size: 28,
+                      weight: FontWeight.w500,
+                      fontFamily: svFontRoboto)),
             ],
           ),
           40.height,
@@ -72,14 +76,24 @@ class _SVSignInScreenState extends State<SVSignInScreen> {
               mainAxisAlignment: MainAxisAlignment.spaceAround,
               children: [
                 TextButton(
-                  child: Text('LOGIN', style: boldTextStyle(color: selectedIndex == 0 ? Colors.white : Colors.white54, size: 16)),
+                  child: Text('LOGIN',
+                      style: boldTextStyle(
+                          color: selectedIndex == 0
+                              ? Colors.white
+                              : Colors.white54,
+                          size: 16)),
                   onPressed: () {
                     selectedIndex = 0;
                     setState(() {});
                   },
                 ),
                 TextButton(
-                  child: Text('SIGNUP', style: boldTextStyle(color: selectedIndex == 1 ? Colors.white : Colors.white54, size: 16)),
+                  child: Text('SIGNUP',
+                      style: boldTextStyle(
+                          color: selectedIndex == 1
+                              ? Colors.white
+                              : Colors.white54,
+                          size: 16)),
                   onPressed: () {
                     selectedIndex = 1;
                     setState(() {});

@@ -1,5 +1,6 @@
 class SVPostModel {
   String? name;
+  String? username;
   String? profileImage;
   String? postImage;
   String? time;
@@ -7,7 +8,15 @@ class SVPostModel {
   int? commentCount;
   bool? like;
 
-  SVPostModel({this.name, this.profileImage, this.postImage, this.time, this.description, this.commentCount, this.like});
+  SVPostModel(
+      {this.name,
+      this.username,
+      this.profileImage,
+      this.postImage,
+      this.time,
+      this.description,
+      this.commentCount,
+      this.like});
 }
 
 List<SVPostModel> getPosts() {
@@ -16,10 +25,12 @@ List<SVPostModel> getPosts() {
   list.add(
     SVPostModel(
       name: 'Manny',
+      username: '@mannyman',
       profileImage: 'images/socialv/faces/face_3.png',
       time: '4m',
       postImage: 'images/socialv/postImage.png',
-      description: 'The great thing about reaching the top of the mountain is realising that there’s space for more than one person.',
+      description:
+          'The great thing about reaching the top of the mountain is realising that there’s space for more than one person.',
       commentCount: 0,
       like: false,
     ),
@@ -27,6 +38,7 @@ List<SVPostModel> getPosts() {
   list.add(
     SVPostModel(
       name: 'Isabelle',
+      username: '@belle',
       profileImage: 'images/socialv/faces/face_4.png',
       time: '4m',
       postImage: 'images/socialv/postImage.png',
@@ -37,6 +49,7 @@ List<SVPostModel> getPosts() {
   list.add(
     SVPostModel(
       name: 'Jenny Wilson',
+      username: '@williejay',
       profileImage: 'images/socialv/faces/face_5.png',
       time: '4m',
       postImage: 'images/socialv/postImage.png',

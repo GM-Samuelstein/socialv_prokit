@@ -15,7 +15,9 @@ class SVSearchCardComponent extends StatelessWidget {
       children: [
         Row(
           children: [
-            Image.asset(element.profileImage.validate(), height: 56, width: 56, fit: BoxFit.cover).cornerRadiusWithClipRRect(8),
+            Image.asset(element.profileImage.validate(),
+                    height: 56, width: 56, fit: BoxFit.cover)
+                .cornerRadiusWithClipRRect(8),
             20.width,
             Column(
               children: [
@@ -24,13 +26,15 @@ class SVSearchCardComponent extends StatelessWidget {
                     Text(element.name.validate(), style: boldTextStyle()),
                     6.width,
                     element.isOfficialAccount.validate()
-                        ? Image.asset('images/socialv/icons/ic_TickSquare.png', height: 14, width: 14, fit: BoxFit.cover)
+                        ? Image.asset('images/socialv/icons/ic_TickSquare.png',
+                            height: 14, width: 14, fit: BoxFit.cover)
                         : Offstage(),
                   ],
                   mainAxisSize: MainAxisSize.min,
                 ),
                 6.height,
-                Text(element.subTitle.validate(), style: secondaryTextStyle(color: svGetBodyColor())),
+                Text(element.subTitle.validate(),
+                    style: secondaryTextStyle(color: svGetBodyColor())),
               ],
               crossAxisAlignment: CrossAxisAlignment.start,
             ),

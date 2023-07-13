@@ -6,7 +6,6 @@ import 'package:socialv_prokit/utils/SVColors.dart';
 import 'package:socialv_prokit/utils/SVCommon.dart';
 import 'package:socialv_prokit/utils/SVConstants.dart';
 
-
 class SVGroupProfileScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
@@ -32,7 +31,8 @@ class SVGroupProfileScreen extends StatelessWidget {
               children: [
                 Text('Avengers Group', style: boldTextStyle(size: 20)),
                 4.width,
-                Image.asset('images/socialv/icons/ic_TickSquare.png', height: 14, width: 14, fit: BoxFit.cover),
+                Image.asset('images/socialv/icons/ic_TickSquare.png',
+                    height: 14, width: 14, fit: BoxFit.cover),
               ],
             ),
             8.height,
@@ -47,7 +47,8 @@ class SVGroupProfileScreen extends StatelessWidget {
                   color: context.iconColor,
                 ),
                 8.width,
-                Text('Public Group', style: secondaryTextStyle(color: svGetBodyColor())),
+                Text('Public Group',
+                    style: secondaryTextStyle(color: svGetBodyColor())),
                 18.width,
                 Image.asset(
                   'images/socialv/icons/ic_Calendar.png',
@@ -57,14 +58,17 @@ class SVGroupProfileScreen extends StatelessWidget {
                   color: context.iconColor,
                 ),
                 8.width,
-                Text('03 Years Ago', style: secondaryTextStyle(color: svGetBodyColor())),
+                Text('03 Years Ago',
+                    style: secondaryTextStyle(color: svGetBodyColor())),
               ],
             ),
             16.height,
             Container(
               padding: EdgeInsets.all(16),
               margin: EdgeInsets.all(16),
-              decoration: BoxDecoration(color: context.cardColor, borderRadius: radius(SVAppCommonRadius)),
+              decoration: BoxDecoration(
+                  color: context.cardColor,
+                  borderRadius: radius(SVAppCommonRadius)),
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
@@ -77,51 +81,89 @@ class SVGroupProfileScreen extends StatelessWidget {
                           alignment: Alignment.centerLeft,
                           children: [
                             Container(
-                              decoration: BoxDecoration(border: Border.all(color: Colors.white, width: 2), borderRadius: radius(100)),
-                              child: Image.asset('images/socialv/faces/face_2.png', height: 32, width: 32, fit: BoxFit.cover).cornerRadiusWithClipRRect(100),
+                              decoration: BoxDecoration(
+                                  border:
+                                      Border.all(color: Colors.white, width: 2),
+                                  borderRadius: radius(100)),
+                              child: Image.asset(
+                                      'images/socialv/faces/face_2.png',
+                                      height: 32,
+                                      width: 32,
+                                      fit: BoxFit.cover)
+                                  .cornerRadiusWithClipRRect(100),
                             ),
                             Positioned(
                               left: 14,
                               child: Container(
-                                decoration: BoxDecoration(border: Border.all(color: Colors.white, width: 2), borderRadius: radius(100)),
-                                child:
-                                    Image.asset('images/socialv/faces/face_3.png', height: 32, width: 32, fit: BoxFit.cover).cornerRadiusWithClipRRect(100),
+                                decoration: BoxDecoration(
+                                    border: Border.all(
+                                        color: Colors.white, width: 2),
+                                    borderRadius: radius(100)),
+                                child: Image.asset(
+                                        'images/socialv/faces/face_3.png',
+                                        height: 32,
+                                        width: 32,
+                                        fit: BoxFit.cover)
+                                    .cornerRadiusWithClipRRect(100),
                               ),
                             ),
                             Positioned(
                               left: 30,
                               child: Container(
-                                decoration: BoxDecoration(border: Border.all(color: Colors.white, width: 2), borderRadius: radius(100)),
-                                child:
-                                    Image.asset('images/socialv/faces/face_4.png', height: 32, width: 32, fit: BoxFit.cover).cornerRadiusWithClipRRect(100),
+                                decoration: BoxDecoration(
+                                    border: Border.all(
+                                        color: Colors.white, width: 2),
+                                    borderRadius: radius(100)),
+                                child: Image.asset(
+                                        'images/socialv/faces/face_4.png',
+                                        height: 32,
+                                        width: 32,
+                                        fit: BoxFit.cover)
+                                    .cornerRadiusWithClipRRect(100),
                               ),
                             ),
                             Positioned(
                               left: 46,
                               child: Container(
-                                decoration: BoxDecoration(border: Border.all(color: Colors.white, width: 2), borderRadius: radius(100)),
-                                child:
-                                    Image.asset('images/socialv/faces/face_5.png', height: 32, width: 32, fit: BoxFit.cover).cornerRadiusWithClipRRect(100),
+                                decoration: BoxDecoration(
+                                    border: Border.all(
+                                        color: Colors.white, width: 2),
+                                    borderRadius: radius(100)),
+                                child: Image.asset(
+                                        'images/socialv/faces/face_5.png',
+                                        height: 32,
+                                        width: 32,
+                                        fit: BoxFit.cover)
+                                    .cornerRadiusWithClipRRect(100),
                               ),
                             ),
                             Positioned(
                               right: 0,
                               child: Container(
-                                decoration: BoxDecoration(border: Border.all(color: Colors.white, width: 2), borderRadius: radius(100)),
-                                child:
-                                    Image.asset('images/socialv/faces/face_1.png', height: 32, width: 32, fit: BoxFit.cover).cornerRadiusWithClipRRect(100),
+                                decoration: BoxDecoration(
+                                    border: Border.all(
+                                        color: Colors.white, width: 2),
+                                    borderRadius: radius(100)),
+                                child: Image.asset(
+                                        'images/socialv/faces/face_1.png',
+                                        height: 32,
+                                        width: 32,
+                                        fit: BoxFit.cover)
+                                    .cornerRadiusWithClipRRect(100),
                               ),
                             ),
                           ],
                         ),
                       ),
                       16.width,
-                      Text('+6 Members', style: secondaryTextStyle(color: context.iconColor)),
+                      Text('+6 Members',
+                          style: secondaryTextStyle(color: context.iconColor)),
                     ],
                   ),
                   28.height,
                   AppButton(
-                    shapeBorder: RoundedRectangleBorder(borderRadius: radius(4)),
+                    shapeBorder:
+                        RoundedRectangleBorder(borderRadius: radius(4)),
                     text: 'Join Group',
                     textStyle: boldTextStyle(color: Colors.white),
                     onTap: () {},

@@ -11,7 +11,6 @@ class SVForgetPasswordScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: svGetScaffoldColor(),
-
       body: Column(
         children: [
           SizedBox(height: context.statusBarHeight + 30),
@@ -30,7 +29,9 @@ class SVForgetPasswordScreen extends StatelessWidget {
               child: Column(
                 children: [
                   20.height,
-                  svRobotoText(text: 'Enter The email Associated With Your \n Account To Receive A Reset Password Mail'),
+                  svRobotoText(
+                      text:
+                          'Enter The email Associated With Your \n Account To Receive A Reset Password Mail'),
                   50.height,
                   AppTextField(
                     textFieldType: TextFieldType.EMAIL,
@@ -38,7 +39,8 @@ class SVForgetPasswordScreen extends StatelessWidget {
                     decoration: svInputDecoration(
                       context,
                       label: 'Enter Your Email',
-                      labelStyle: secondaryTextStyle(weight: FontWeight.w600, color: svGetBodyColor()),
+                      labelStyle: secondaryTextStyle(
+                          weight: FontWeight.w600, color: svGetBodyColor()),
                     ),
                   ).paddingSymmetric(horizontal: 16),
                   100.height,

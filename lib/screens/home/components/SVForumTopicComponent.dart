@@ -1,4 +1,3 @@
-
 import 'package:flutter/material.dart';
 import 'package:nb_utils/nb_utils.dart';
 import 'package:socialv_prokit/models/SVForumTopicModel.dart';
@@ -47,7 +46,9 @@ class _SVForumTopicComponentState extends State<SVForumTopicComponent> {
       padding: EdgeInsets.all(16),
       itemBuilder: (context, index) {
         return Container(
-          decoration: BoxDecoration(color: context.cardColor, borderRadius: radius(SVAppCommonRadius)),
+          decoration: BoxDecoration(
+              color: context.cardColor,
+              borderRadius: radius(SVAppCommonRadius)),
           padding: EdgeInsets.all(16),
           margin: EdgeInsets.symmetric(vertical: 8),
           child: Column(
@@ -58,16 +59,22 @@ class _SVForumTopicComponentState extends State<SVForumTopicComponent> {
                 children: [
                   Row(
                     children: [
-                      Image.asset('images/socialv/icons/ic_2User.png', height: 16, width: 16, fit: BoxFit.cover),
+                      Image.asset('images/socialv/icons/ic_2User.png',
+                          height: 16, width: 16, fit: BoxFit.cover),
                       8.width,
-                      Text(tempList[index].name.validate(), style: secondaryTextStyle(color: svGetBodyColor())),
+                      Text(tempList[index].name.validate(),
+                          style: secondaryTextStyle(color: svGetBodyColor())),
                       20.width,
-                      Image.asset('images/socialv/icons/ic_Folder.png', height: 16, width: 16, fit: BoxFit.cover),
+                      Image.asset('images/socialv/icons/ic_Folder.png',
+                          height: 16, width: 16, fit: BoxFit.cover),
                       8.width,
-                      Text('${tempList[index].domain.validate()}', style: secondaryTextStyle(color: svGetBodyColor())),
+                      Text('${tempList[index].domain.validate()}',
+                          style: secondaryTextStyle(color: svGetBodyColor())),
                     ],
                   ),
-                  if (tempList[index].isFav.validate()) Image.asset('images/socialv/icons/ic_HeartFilled.png', height: 16, width: 16, fit: BoxFit.fill),
+                  if (tempList[index].isFav.validate())
+                    Image.asset('images/socialv/icons/ic_HeartFilled.png',
+                        height: 16, width: 16, fit: BoxFit.fill),
                 ],
               ),
               12.height,
@@ -78,23 +85,32 @@ class _SVForumTopicComponentState extends State<SVForumTopicComponent> {
                 children: [
                   Column(
                     children: [
-                      Text('POST', style: secondaryTextStyle(size: 12, color: svGetBodyColor())),
+                      Text('POST',
+                          style: secondaryTextStyle(
+                              size: 12, color: svGetBodyColor())),
                       4.height,
-                      Text(tempList[index].postNo.validate(), style: boldTextStyle(size: 14)),
+                      Text(tempList[index].postNo.validate(),
+                          style: boldTextStyle(size: 14)),
                     ],
                   ),
                   Column(
                     children: [
-                      Text('VOICES', style: secondaryTextStyle(size: 12, color: svGetBodyColor())),
+                      Text('VOICES',
+                          style: secondaryTextStyle(
+                              size: 12, color: svGetBodyColor())),
                       4.height,
-                      Text(tempList[index].voicesNo.validate(), style: boldTextStyle(size: 14)),
+                      Text(tempList[index].voicesNo.validate(),
+                          style: boldTextStyle(size: 14)),
                     ],
                   ),
                   Column(
                     children: [
-                      Text('FRESHNESS', style: secondaryTextStyle(size: 12, color: svGetBodyColor())),
+                      Text('FRESHNESS',
+                          style: secondaryTextStyle(
+                              size: 12, color: svGetBodyColor())),
                       4.height,
-                      Text(tempList[index].freshness.validate(), style: boldTextStyle(size: 14)),
+                      Text(tempList[index].freshness.validate(),
+                          style: boldTextStyle(size: 14)),
                     ],
                   )
                 ],

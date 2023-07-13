@@ -68,7 +68,8 @@ class _SVOTPScreenState extends State<SVOTPScreen> {
             SizedBox(height: context.statusBarHeight + 80),
             Text('OTP Verification', style: boldTextStyle(size: 20)),
             16.height,
-            svRobotoText(text: 'We Have Sent A 4 Digit Code To Your \n Email Address'),
+            svRobotoText(
+                text: 'We Have Sent A 4 Digit Code To Your \n Email Address'),
             48.height,
             Wrap(
               spacing: 24,
@@ -87,11 +88,14 @@ class _SVOTPScreenState extends State<SVOTPScreen> {
                     nextFocus: nodes[index + 1],
                     focus: nodes[index],
                     maxLength: 1,
-                    textInputAction: index == 3 ? TextInputAction.done : TextInputAction.next,
+                    textInputAction: index == 3
+                        ? TextInputAction.done
+                        : TextInputAction.next,
                     textAlign: TextAlign.center,
                     textFieldType: TextFieldType.PHONE,
                     textStyle: boldTextStyle(size: 24, color: svGetBodyColor()),
-                    decoration: InputDecoration(border: InputBorder.none, counterText: ''),
+                    decoration: InputDecoration(
+                        border: InputBorder.none, counterText: ''),
                     validator: (no) {
                       if (no == null || no.isEmpty) {
                         return 'Enter';
@@ -114,7 +118,8 @@ class _SVOTPScreenState extends State<SVOTPScreen> {
               }),
             ).center(),
             24.height,
-            Text('00:${counter.toString()}', style: boldTextStyle(size: 14, color: Color(0xFF3AB74E))),
+            Text('00:${counter.toString()}',
+                style: boldTextStyle(size: 14, color: Color(0xFF3AB74E))),
             20.height,
             Row(
               mainAxisAlignment: MainAxisAlignment.center,

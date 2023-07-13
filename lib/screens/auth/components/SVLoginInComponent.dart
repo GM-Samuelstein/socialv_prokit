@@ -27,9 +27,13 @@ class _SVLoginInComponentState extends State<SVLoginInComponent> {
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             16.height,
-            Text('Welcome back!', style: boldTextStyle(size: 24)).paddingSymmetric(horizontal: 16),
+            Text('Welcome back!', style: boldTextStyle(size: 24))
+                .paddingSymmetric(horizontal: 16),
             8.height,
-            Text('You Have Been Missed For Long Time', style: secondaryTextStyle(weight: FontWeight.w500, color: svGetBodyColor())).paddingSymmetric(horizontal: 16),
+            Text("It's great to have you here.",
+                    style: secondaryTextStyle(
+                        weight: FontWeight.w500, color: svGetBodyColor()))
+                .paddingSymmetric(horizontal: 16),
             Container(
               child: Column(
                 children: [
@@ -39,8 +43,9 @@ class _SVLoginInComponentState extends State<SVLoginInComponent> {
                     textStyle: boldTextStyle(),
                     decoration: svInputDecoration(
                       context,
-                      label: 'Username',
-                      labelStyle: secondaryTextStyle(weight: FontWeight.w600, color: svGetBodyColor()),
+                      label: 'Email',
+                      labelStyle: secondaryTextStyle(
+                          weight: FontWeight.w600, color: svGetBodyColor()),
                     ),
                   ).paddingSymmetric(horizontal: 16),
                   16.height,
@@ -48,13 +53,21 @@ class _SVLoginInComponentState extends State<SVLoginInComponent> {
                     textFieldType: TextFieldType.PASSWORD,
                     textStyle: boldTextStyle(),
                     suffixIconColor: svGetBodyColor(),
-                    suffixPasswordInvisibleWidget: Image.asset('images/socialv/icons/ic_Hide.png', height: 16, width: 16, fit: BoxFit.fill).paddingSymmetric(vertical: 16, horizontal: 14),
-                    suffixPasswordVisibleWidget: svRobotoText(text: 'Show', color: SVAppColorPrimary).paddingOnly(top: 20),
+                    suffixPasswordInvisibleWidget: Image.asset(
+                            'images/socialv/icons/ic_Hide.png',
+                            height: 16,
+                            width: 16,
+                            fit: BoxFit.fill)
+                        .paddingSymmetric(vertical: 16, horizontal: 14),
+                    suffixPasswordVisibleWidget:
+                        svRobotoText(text: 'Show', color: SVAppColorPrimary)
+                            .paddingOnly(top: 20),
                     decoration: svInputDecoration(
                       context,
                       label: 'Password',
                       contentPadding: EdgeInsets.all(0),
-                      labelStyle: secondaryTextStyle(weight: FontWeight.w600, color: svGetBodyColor()),
+                      labelStyle: secondaryTextStyle(
+                          weight: FontWeight.w600, color: svGetBodyColor()),
                     ),
                   ).paddingSymmetric(horizontal: 16),
                   12.height,
@@ -64,7 +77,8 @@ class _SVLoginInComponentState extends State<SVLoginInComponent> {
                       Row(
                         children: [
                           Checkbox(
-                            shape: RoundedRectangleBorder(borderRadius: radius(2)),
+                            shape:
+                                RoundedRectangleBorder(borderRadius: radius(2)),
                             activeColor: SVAppColorPrimary,
                             value: doRemember,
                             onChanged: (val) {
@@ -98,13 +112,17 @@ class _SVLoginInComponentState extends State<SVLoginInComponent> {
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: [
                       svRobotoText(text: 'Don’t Have An Account?'),
-                      4.width,
+                      6.width,
                       Text(
                         'Sign Up',
-                        style: secondaryTextStyle(color: SVAppColorPrimary, decoration: TextDecoration.underline),
+                        style: secondaryTextStyle(
+                            color: SVAppColorPrimary,
+                            decoration: TextDecoration.underline),
                       ).onTap(() {
                         widget.callback?.call();
-                      }, highlightColor: Colors.transparent, splashColor: Colors.transparent)
+                      },
+                          highlightColor: Colors.transparent,
+                          splashColor: Colors.transparent)
                     ],
                   ),
                   50.height,
@@ -113,11 +131,8 @@ class _SVLoginInComponentState extends State<SVLoginInComponent> {
                   Row(
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: [
-                      Image.asset('images/socialv/icons/ic_Google.png', height: 36, width: 36, fit: BoxFit.cover),
-                      8.width,
-                      Image.asset('images/socialv/icons/ic_Facebook.png', height: 36, width: 36, fit: BoxFit.cover),
-                      8.width,
-                      Image.asset('images/socialv/icons/ic_Twitter.png', height: 36, width: 36, fit: BoxFit.cover),
+                      Image.asset('images/socialv/icons/ic_Google.png',
+                          height: 36, width: 36, fit: BoxFit.cover),
                     ],
                   ),
                   50.height,

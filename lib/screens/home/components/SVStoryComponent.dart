@@ -40,7 +40,11 @@ class _SVStoryComponentState extends State<SVStoryComponent> {
                     }),
               ),
               10.height,
-              Text('Your Story', style: secondaryTextStyle(size: 12, color: context.iconColor, weight: FontWeight.w500)),
+              Text('Your Story',
+                  style: secondaryTextStyle(
+                      size: 12,
+                      color: context.iconColor,
+                      weight: FontWeight.w500)),
             ],
           ),
           HorizontalList(
@@ -64,7 +68,11 @@ class _SVStoryComponentState extends State<SVStoryComponent> {
                     SVStoryScreen(story: storyList[index]).launch(context);
                   }),
                   10.height,
-                  Text(storyList[index].name.validate(), style: secondaryTextStyle(size: 12, color: context.iconColor, weight: FontWeight.w500)),
+                  Text(storyList[index].name.validate(),
+                      style: secondaryTextStyle(
+                          size: 12,
+                          color: context.iconColor,
+                          weight: FontWeight.w500)),
                 ],
               );
             },

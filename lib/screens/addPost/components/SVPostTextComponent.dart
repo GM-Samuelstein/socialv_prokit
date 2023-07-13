@@ -11,7 +11,8 @@ class SVPostTextComponent extends StatelessWidget {
     return Container(
       padding: EdgeInsets.all(16),
       margin: EdgeInsets.all(16),
-      decoration: BoxDecoration(color: svGetScaffoldColor(), borderRadius: radius(SVAppCommonRadius)),
+      decoration: BoxDecoration(
+          color: svGetScaffoldColor(), borderRadius: radius(SVAppCommonRadius)),
       child: TextField(
         autofocus: false,
         maxLines: 15,

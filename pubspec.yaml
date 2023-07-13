@@ -13,15 +13,24 @@ dependencies:
 
   cupertino_icons: ^1.0.5
   flutter_vector_icons: ^2.0.0
+  
+  # APIs
+  html: ^0.15.4
+  http: ^1.1.0
+  intl: ^0.18.1
+
+  # Images
   image_picker: ^1.0.0
+
+  # Others
+  cached_network_image: ^3.2.3
+  dots_indicator: ^3.0.0
   nb_utils: ^6.0.0
   package_info_plus: ^4.0.2
   google_fonts: ^5.1.0
-
-  # APIs
-  intl: ^0.18.1
-  html: ^0.15.4
-  http: ^1.1.0
+  otp_text_field: ^1.1.3
+  fl_chart: ^0.63.0
+  scan: ^1.6.0
 
   # State Management
   flutter_mobx: ^2.0.6+5
@@ -45,7 +54,9 @@ flutter:
 
   assets:
     - images/socialv/posts/
-    - images/socialv/faces/
+    - images/socialv/faces/ 
     - images/socialv/
     - images/socialv/icons/
     - images/socialv/gifs/
+    - images/theme12/
+    - images/walletApp/

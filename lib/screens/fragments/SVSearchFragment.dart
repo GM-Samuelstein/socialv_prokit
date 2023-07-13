@@ -31,14 +31,20 @@ class _SVSearchFragmentState extends State<SVSearchFragment> {
         iconTheme: IconThemeData(color: context.iconColor),
         leadingWidth: 30,
         title: Container(
-          decoration: BoxDecoration(color: context.cardColor, borderRadius: radius(8)),
+          decoration:
+              BoxDecoration(color: context.cardColor, borderRadius: radius(8)),
           child: AppTextField(
             textFieldType: TextFieldType.NAME,
             decoration: InputDecoration(
               border: InputBorder.none,
               hintText: 'Search Here',
               hintStyle: secondaryTextStyle(color: svGetBodyColor()),
-              prefixIcon: Image.asset('images/socialv/icons/ic_Search.png', height: 16, width: 16, fit: BoxFit.cover, color: svGetBodyColor()).paddingAll(16),
+              prefixIcon: Image.asset('images/socialv/icons/ic_Search.png',
+                      height: 16,
+                      width: 16,
+                      fit: BoxFit.cover,
+                      color: svGetBodyColor())
+                  .paddingAll(16),
             ),
           ),
         ),

@@ -18,7 +18,8 @@ class _SVNotificationFragmentState extends State<SVNotificationFragment> {
   List<SVNotificationModel> listMonth = getNotificationsThisMonth();
   List<SVNotificationModel> listEarlier = getNotificationsEarlier();
 
-  Widget getNotificationComponent({String? type, required SVNotificationModel element}) {
+  Widget getNotificationComponent(
+      {String? type, required SVNotificationModel element}) {
     if (type == SVNotificationType.like) {
       return SVLikeNotificationComponent(element: element);
     } else if (type == SVNotificationType.request) {
@@ -60,21 +61,24 @@ class _SVNotificationFragmentState extends State<SVNotificationFragment> {
             Divider(height: 0, indent: 16, endIndent: 16),
             Column(
               children: listToday.map((e) {
-                return getNotificationComponent(type: e.notificationType, element: e);
+                return getNotificationComponent(
+                    type: e.notificationType, element: e);
               }).toList(),
             ),
             Text('THIS MONTH', style: boldTextStyle()).paddingAll(16),
             Divider(height: 0, indent: 16, endIndent: 16),
             Column(
               children: listMonth.map((e) {
-                return getNotificationComponent(type: e.notificationType, element: e);
+                return getNotificationComponent(
+                    type: e.notificationType, element: e);
               }).toList(),
             ),
             Text('Earlier', style: boldTextStyle()).paddingAll(16),
             Divider(height: 0, indent: 16, endIndent: 16),
             Column(
               children: listEarlier.map((e) {
-                return getNotificationComponent(type: e.notificationType, element: e);
+                return getNotificationComponent(
+                    type: e.notificationType, element: e);
               }).toList(),
             ),
             16.height,

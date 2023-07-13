@@ -18,7 +18,9 @@ class SVCommentReplyComponent extends StatelessWidget {
           Row(
             children: [
               16.width,
-              Image.asset('images/socialv/faces/face_5.png', height: 48, width: 48, fit: BoxFit.cover).cornerRadiusWithClipRRect(8),
+              Image.asset('images/socialv/faces/face_5.png',
+                      height: 48, width: 48, fit: BoxFit.cover)
+                  .cornerRadiusWithClipRRect(8),
               10.width,
               Container(
                 width: context.width() * 0.6,
@@ -33,7 +35,10 @@ class SVCommentReplyComponent extends StatelessWidget {
                   ),
                 ),
               ),
-              TextButton(onPressed: () {}, child: Text('Reply', style: secondaryTextStyle(color: SVAppColorPrimary)))
+              TextButton(
+                  onPressed: () {},
+                  child: Text('Reply',
+                      style: secondaryTextStyle(color: SVAppColorPrimary)))
             ],
           ),
         ],

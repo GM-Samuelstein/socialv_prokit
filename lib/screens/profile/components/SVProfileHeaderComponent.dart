@@ -19,12 +19,18 @@ class SVProfileHeaderComponent extends StatelessWidget {
                 width: context.width(),
                 height: 130,
                 fit: BoxFit.cover,
-              ).cornerRadiusWithClipRRectOnly(topLeft: SVAppCommonRadius.toInt(), topRight: SVAppCommonRadius.toInt()),
+              ).cornerRadiusWithClipRRectOnly(
+                  topLeft: SVAppCommonRadius.toInt(),
+                  topRight: SVAppCommonRadius.toInt()),
               Positioned(
                 bottom: 0,
                 child: Container(
-                  decoration: BoxDecoration(border: Border.all(color: Colors.white, width: 2), borderRadius: radius(18)),
-                  child: Image.asset('images/socialv/faces/face_5.png', height: 88, width: 88, fit: BoxFit.cover).cornerRadiusWithClipRRect(SVAppCommonRadius),
+                  decoration: BoxDecoration(
+                      border: Border.all(color: Colors.white, width: 2),
+                      borderRadius: radius(18)),
+                  child: Image.asset('images/socialv/faces/face_5.png',
+                          height: 88, width: 88, fit: BoxFit.cover)
+                      .cornerRadiusWithClipRRect(SVAppCommonRadius),
                 ),
               ),
             ],

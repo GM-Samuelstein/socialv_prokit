@@ -15,9 +15,12 @@ class SVPasswordSetSuccessScreen extends StatelessWidget {
           Column(
             children: [
               100.height,
-              Image.asset('images/socialv/gifs/success_tickmark.gif', fit: BoxFit.cover).paddingOnly(left: 30, right: 30),
+              Image.asset('images/socialv/gifs/success_tickmark.gif',
+                      fit: BoxFit.cover)
+                  .paddingOnly(left: 30, right: 30),
               Text('Your Password Reset Was', style: boldTextStyle(size: 24)),
-              Text('Successfully!', style: boldTextStyle(size: 24, color: Color(0xFF00A66C))),
+              Text('Successfully!',
+                  style: boldTextStyle(size: 24, color: Color(0xFF00A66C))),
             ],
           ),
           svAppButton(

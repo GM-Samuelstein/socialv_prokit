@@ -1,4 +1,3 @@
-
 import 'package:socialv_prokit/utils/SVConstants.dart';
 
 class SVNotificationModel {
@@ -11,7 +10,15 @@ class SVNotificationModel {
   bool? isOfficial;
   String? birthDate;
 
-  SVNotificationModel({this.name, this.profileImage, this.time, this.notificationType, this.postImage, this.isOfficial, this.secondName, this.birthDate});
+  SVNotificationModel(
+      {this.name,
+      this.profileImage,
+      this.time,
+      this.notificationType,
+      this.postImage,
+      this.isOfficial,
+      this.secondName,
+      this.birthDate});
 }
 
 List<SVNotificationModel> getNotificationsToday() {

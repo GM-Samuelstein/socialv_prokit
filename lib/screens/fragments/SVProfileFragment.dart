@@ -18,10 +18,9 @@ class SVProfileFragment extends StatefulWidget {
 }
 
 class _SVProfileFragmentState extends State<SVProfileFragment> {
-
-@override
+  @override
   void initState() {
-  setStatusBarColor(Colors.transparent);
+    setStatusBarColor(Colors.transparent);
     super.initState();
   }
 
@@ -57,14 +56,16 @@ class _SVProfileFragmentState extends State<SVProfileFragment> {
                 children: [
                   Text('Manding boss', style: boldTextStyle(size: 20)),
                   4.width,
-                  Image.asset('images/socialv/icons/ic_TickSquare.png', height: 14, width: 14, fit: BoxFit.cover),
+                  Image.asset('images/socialv/icons/ic_TickSquare.png',
+                      height: 14, width: 14, fit: BoxFit.cover),
                 ],
               ),
-              Text('@splatterui', style: secondaryTextStyle(color: svGetBodyColor())),
+              Text('@splatterui',
+                  style: secondaryTextStyle(color: svGetBodyColor())),
               24.height,
               AppButton(
                 shapeBorder: RoundedRectangleBorder(borderRadius: radius(4)),
-                text: 'Following',
+                text: 'Follow',
                 textStyle: boldTextStyle(color: Colors.white),
                 onTap: () {},
                 elevation: 0,
@@ -76,21 +77,27 @@ class _SVProfileFragmentState extends State<SVProfileFragment> {
                 children: [
                   Column(
                     children: [
-                      Text('Posts', style: secondaryTextStyle(color: svGetBodyColor(), size: 12)),
+                      Text('Posts',
+                          style: secondaryTextStyle(
+                              color: svGetBodyColor(), size: 12)),
                       4.height,
                       Text('1,1286', style: boldTextStyle(size: 18)),
                     ],
                   ),
                   Column(
                     children: [
-                      Text('Followers', style: secondaryTextStyle(color: svGetBodyColor(), size: 12)),
+                      Text('Followers',
+                          style: secondaryTextStyle(
+                              color: svGetBodyColor(), size: 12)),
                       4.height,
                       Text('127k', style: boldTextStyle(size: 18)),
                     ],
                   ),
                   Column(
                     children: [
-                      Text('Views', style: secondaryTextStyle(color: svGetBodyColor(), size: 12)),
+                      Text('Views',
+                          style: secondaryTextStyle(
+                              color: svGetBodyColor(), size: 12)),
                       4.height,
                       Text('1156m', style: boldTextStyle(size: 18)),
                     ],
@@ -100,12 +107,15 @@ class _SVProfileFragmentState extends State<SVProfileFragment> {
               16.height,
               Container(
                 margin: EdgeInsets.all(16),
-                decoration: BoxDecoration(color: context.cardColor, borderRadius: radius(SVAppCommonRadius)),
+                decoration: BoxDecoration(
+                    color: context.cardColor,
+                    borderRadius: radius(SVAppCommonRadius)),
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
                     16.height,
-                    Text('Your Stories', style: boldTextStyle(size: 14)).paddingSymmetric(horizontal: 16),
+                    Text('Your Stories', style: boldTextStyle(size: 14))
+                        .paddingSymmetric(horizontal: 16),
                     SVStoryComponent(),
                   ],
                 ),

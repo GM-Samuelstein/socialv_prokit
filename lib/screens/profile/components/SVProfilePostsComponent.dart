@@ -3,12 +3,12 @@ import 'package:nb_utils/nb_utils.dart';
 import 'package:socialv_prokit/utils/SVColors.dart';
 import 'package:socialv_prokit/utils/SVConstants.dart';
 
-
 class SVProfilePostsComponent extends StatefulWidget {
   const SVProfilePostsComponent({Key? key}) : super(key: key);
 
   @override
-  State<SVProfilePostsComponent> createState() => _SVProfilePostsComponentState();
+  State<SVProfilePostsComponent> createState() =>
+      _SVProfilePostsComponentState();
 }
 
 class _SVProfilePostsComponentState extends State<SVProfilePostsComponent> {
@@ -31,7 +31,8 @@ class _SVProfilePostsComponentState extends State<SVProfilePostsComponent> {
     return Container(
       margin: EdgeInsets.all(16),
       padding: EdgeInsets.all(16),
-      decoration: BoxDecoration(color: context.cardColor, borderRadius: radius(SVAppContainerRadius)),
+      decoration: BoxDecoration(
+          color: context.cardColor, borderRadius: radius(SVAppContainerRadius)),
       child: Column(
         children: [
           Row(
@@ -49,14 +50,18 @@ class _SVProfilePostsComponentState extends State<SVProfilePostsComponent> {
                       style: TextStyle(
                         color: SVAppColorPrimary,
                         fontSize: 14,
-                        fontWeight: selectedIndex == 0 ? FontWeight.bold : FontWeight.normal,
+                        fontWeight: selectedIndex == 0
+                            ? FontWeight.bold
+                            : FontWeight.normal,
                       ),
                     ),
                   ),
                   Container(
                     height: 2,
                     width: context.width() / 2 - 32,
-                    color: selectedIndex == 0 ? SVAppColorPrimary : SVAppColorPrimary.withOpacity(0.5),
+                    color: selectedIndex == 0
+                        ? SVAppColorPrimary
+                        : SVAppColorPrimary.withOpacity(0.5),
                   ),
                 ],
               ),
@@ -72,14 +77,18 @@ class _SVProfilePostsComponentState extends State<SVProfilePostsComponent> {
                       style: TextStyle(
                         color: SVAppColorPrimary,
                         fontSize: 14,
-                        fontWeight: selectedIndex == 1 ? FontWeight.bold : FontWeight.normal,
+                        fontWeight: selectedIndex == 1
+                            ? FontWeight.bold
+                            : FontWeight.normal,
                       ),
                     ),
                   ),
                   Container(
                     height: 2,
                     width: context.width() / 2 - 32,
-                    color: selectedIndex == 1 ? SVAppColorPrimary : SVAppColorPrimary.withOpacity(0.5),
+                    color: selectedIndex == 1
+                        ? SVAppColorPrimary
+                        : SVAppColorPrimary.withOpacity(0.5),
                   ),
                 ],
               ),
@@ -92,7 +101,9 @@ class _SVProfilePostsComponentState extends State<SVProfilePostsComponent> {
             shrinkWrap: true,
             physics: NeverScrollableScrollPhysics(),
             itemBuilder: (BuildContext context, int index) {
-              return Image.asset(allPostList[index], height: 100, fit: BoxFit.cover).cornerRadiusWithClipRRect(8);
+              return Image.asset(allPostList[index],
+                      height: 100, fit: BoxFit.cover)
+                  .cornerRadiusWithClipRRect(8);
             },
             gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
               crossAxisCount: 3,

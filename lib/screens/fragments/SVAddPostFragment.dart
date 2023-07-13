@@ -6,7 +6,6 @@ import 'package:socialv_prokit/screens/addPost/components/SVPostTextComponent.da
 import 'package:socialv_prokit/utils/SVColors.dart';
 import 'package:socialv_prokit/utils/SVCommon.dart';
 
-
 class SVAddPostFragment extends StatefulWidget {
   const SVAddPostFragment({Key? key}) : super(key: key);
 
@@ -25,10 +24,10 @@ class _SVAddPostFragmentState extends State<SVAddPostFragment> {
     });
   }
 
-
   @override
   void dispose() {
-    setStatusBarColor(appStore.isDarkMode ? appBackgroundColorDark : SVAppLayoutBackground);
+    setStatusBarColor(
+        appStore.isDarkMode ? appBackgroundColorDark : SVAppLayoutBackground);
     super.dispose();
   }
 
@@ -72,5 +71,3 @@ class _SVAddPostFragmentState extends State<SVAddPostFragment> {
     );
   }
 }
-
-
