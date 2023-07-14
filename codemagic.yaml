@@ -1,45 +1,30 @@
 workflows:
-  main:
-    name: Main Workflow
+  simulator-native-ios:
+    name: iOS simulator build
+    max_build_duration: 120
+    instance_type: mac_mini_m1
     environment:
       vars:
-        # Environment variables and configurations
-
-    # Configuration for iOS builds
-    ios:
-      xcode_workspace: ios/Runner.xcworkspace
-      xcode_scheme: Runner
-      export_method: ad-hoc
-      include_bitcode: false
-      output_directory: build
-      artifacts:
-        - build/**/*.ipa
-
-    # Configuration for Android builds
-    android:
-      flavors:
-        - flavor1
-        - flavor2
-      build_modes:
-        - release
-      output_directory: build/app/outputs/apk/release
-      artifacts:
-        - build/app/outputs/**/*.apk
-
-    # Scripts or commands to run after the build
+        XCODE_WORKSPACE: "socialv_prokit.xcworkspace"
+        XCODE_SCHEME: "socialv_prokit"
+      xcode: 13.0
+      cocoapods: default
     scripts:
-      - flutter test
-      - flutter build web
-
-    # Notifications configuration
-    notifications:
-      email:
-        recipients:
-          - example1@example.com
-          - example2@example.com
-        on_success: always
-        on_failure: always
-      slack:
-        webhook_url: https://hooks.slack.com/services/ABC12345/XYZ98765/your-slack-webhook-url
-        on_success: always
-        on_failure: always
+      - name: Install CocoaPods dependencies
+        script: | 
+          pod install
+      - name: Build the .app
+        script: | 
+          xcodebuild build \
+            -workspace "$XCODE_WORKSPACE" \
+            -scheme "$XCODE_SCHEME" \
+            -sdk iphonesimulator \
+            -destination 'platform=iOS Simulator,name=iPhone X,OS=16.5.1' \
+            -configuration Debug \
+            CODE_SIGN_IDENTITY="" \
+            CODE_SIGNING_REQUIRED=NO \
+            CODE_SIGNING_ALLOWED=NO 
+    artifacts:
+      - /tmp/xcodebuild_logs/*.log
+      - $HOME/Library/Developer/Xcode/DerivedData/**/Build/**/*.app
+      - $HOME/Library/Developer/Xcode/DerivedData/**/Build/**/*.dSYM
